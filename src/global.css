@@ -1,0 +1,266 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: sans-serif;
+}
+
+@keyframes float {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+}
+
+.bg-gradient-main {
+  background: linear-gradient(to top, #fba007, #ffc630);
+}
+
+.bg-gradient-overlay {
+  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 40%, rgba(0,212,255,0) 100%);
+}
+
+.radial-gradient-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, #fe424247 0%, hsl(230deg 11.63% 8.43%) 60%);
+}
+
+.progress-gradient {
+  background: linear-gradient(to right, #90ef89, #d692dd, #726edd);
+}
+
+.top-glow {
+  box-shadow: 0 -26px 20px rgba(243, 186, 47, 0.3);
+}
+
+/* Define the keyframes for the blinking animation */
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Apply the animation to the dot class */
+.dot {
+  width: 6px;
+  height: 6px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  animation: blink 1s infinite;
+}
+
+.circle-outer {
+  background: linear-gradient(to bottom, #575def, #202731);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90vw;
+  height: 90vw;
+  max-width: 360px;
+  max-height: 360px;
+}
+
+.circle-inner {
+  background: radial-gradient(circle, #4960b2, #282e3e);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.bg-nav {
+    --tw-bg-opacity: 1;
+    background-color: rgb(117 98 41 / 52%);
+  }
+  
+  .emage {
+    object-fit: contain;
+    width: 50%;
+    height: auto; /* Changed height to auto for better responsiveness */
+    margin-top: 78px;
+    max-width: 100%; /* Ensure the image doesn't overflow its container */
+  }
+  
+  @media (min-width: 375px) and (max-width: 500px) {
+    .emage {
+        width: 28%;
+        height: auto;
+        margin-top: 106px;
+    }
+  }
+  
+  @media (min-width: 375px) and (max-width: 538px) {
+    .emage  {
+        width: 30%;
+        height: auto;
+        margin-top: 95px;
+    }
+  }
+  
+  @media (max-width: 700px) {
+    .emage  {
+        width: 74%;
+        height: auto;
+        margin-top: 126px;
+    }
+  }
+  
+  @media (max-width: 667px) {
+    .emage  {
+        width: 67%;
+        height: auto;
+        margin-top: 76px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .emage  {
+        width: 56%;
+        height: auto;
+        margin-top: 93px;
+    }
+  }
+  
+  
+  @media (max-width: 634px) {
+    .emage  {
+        width: 60%;
+        height: auto;
+        margin-top: 40px;
+    }
+  }
+  
+  
+  @media (min-width: 601px) and (max-width: 1024px) {
+    .emage  {
+        width: 43%;
+        height: auto;
+        margin-top: 120px;
+    }
+  }
+  
+  @media (min-width: 1025px) {
+    .emage  {
+        width: 41%;
+        height: auto;
+        margin-top: 108px;
+    }
+  }
+
+@keyframes float {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+}
+
+/* Define the animation for click points */
+@keyframes clickAnimation {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-30px);
+      opacity: 0;
+    }
+  }
+  
+  /* Apply the animation to the click points */
+  .click-points {
+    animation: clickAnimation 1s ease-out forwards;
+  }
+  
+  
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .animate-spin {
+    animation: spin 1s linear infinite;
+  }
+  @keyframes wobble {
+    0%, 100% {
+      transform: rotate(-3deg);
+    }
+    50% {
+      transform: rotate(3deg);
+    }
+  }
+  
+  .wobble {
+    animation: wobble 0.5s ease;
+  }
+  
+  @keyframes float {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+  }
+  
+  .boost-timeout {
+    color: #ff0000;
+  }
+  
+  .boost-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  
+  .boost-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .boost-buttons button {
+    background-color: #f4b23e;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .boost-buttons button:hover {
+    background-color: #d99a2b;
+  }
+  
+  .boost-buttons button:active {
+    background-color: #b87f22;
+  }
+  
